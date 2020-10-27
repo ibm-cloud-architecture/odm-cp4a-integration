@@ -1,27 +1,22 @@
 - title: Introduction
   pages:
-    - title: Overview
-      path: /introduction/overview/
-    - title: Reference Architecture
-      path: /introduction/reference-architecture/
-    - title: Target audiences
-      path: /introduction/target-audiences/
-- title: Methodology
+    - path: /introduction/
+- title: Configuration
   pages:
-    - title: Overview
-      path: /methodology/overview/
-- title: Technology
+    - path: /configuration/
+- title: Use case
   pages:
-    - title: Decision
-      path: /technology/decision/
-    - title: RPA
-      path: /technology/rpa/
-- title: Use Cases
+    - path: /usecase/
+- title: Champion-Challenger
   pages:
-    - title: Refund request
-      path: /use-cases/refund-req/
-    - title: Car Dealer
-      path: /use-cases/car-dealer/
-- title: Contribute to this Site
+    - path: /champchall/
+- title: Simulation
   pages:
-    - path: /contribute/
+    - title: Scenario Provider
+      path: /simulation/provider/
+    - title: Large Scale Simulation
+      path: /simulation/largescale/
+- title: CI/CD with ODM
+  pages:
+    - path: /cicd/
+ 

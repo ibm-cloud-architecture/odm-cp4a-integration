@@ -5,7 +5,7 @@ import { calloutLink } from './Homepage.module.scss';
 import { withPrefix } from 'gatsby';
 
 // import Carbon from '../../images/building_1024x512.jpg';
-import Carbon from '../../images/Madrid-airport.jpg';
+// import Carbon from '../../images/Madrid-airport.jpg';
 const FirstLeftText = () => <p>What are Digital Business Automation Architectures?</p>;
 
 const FirstRightText = () => (
@@ -36,7 +36,7 @@ const SecondRightText = () => (
   </p>
 );
 
-const BannerText = () => <h1>IBM Garage Digital Business Automation Reference Architecture</h1>;
+const BannerText = () => <h1>ODM and WML Integration</h1>;
 
 const customProps = {
   Banner: <HomepageBanner renderText={BannerText} image={Carbon} />,
