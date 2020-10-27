@@ -5,7 +5,7 @@ import { calloutLink } from './Homepage.module.scss';
 import { withPrefix } from 'gatsby';
 
 // import Carbon from '../../images/building_1024x512.jpg';
-// import Carbon from '../../images/Madrid-airport.jpg';
+import Carbon from '../../images/frictionless.jpg';
 const FirstLeftText = () => <p>What are Digital Business Automation Architectures?</p>;
 
 const FirstRightText = () => (
