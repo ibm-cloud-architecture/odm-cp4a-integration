@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>final risk</name>
+  <uuid>28c26ff2-a4a6-4655-bca1-57e30b78c091</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C0">
+          <Properties>
+            <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+          </Properties>
+          <ExpressionDefinition>
+            <Text><![CDATA[the predictive component of risk is <a level>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C1">
+          <ExpressionDefinition>
+            <Text><![CDATA[the relationship component of risk is <a level>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[set the combined value of risk to <a level>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C0">
+        <Condition>
+          <Expression>
+            <Param><![CDATA[high]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                <Param><![CDATA[{ high,medium }]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[high]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[low]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[medium]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Param><![CDATA[low]]></Param>
+          </Expression>
+          <Partition DefId="C1">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[high]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[medium]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Text><![CDATA[<an object> is one of <objects>]]></Text>
+                <Param><![CDATA[{ low,medium }]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA[low]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[combined risk]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[490]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[predictive risk]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[492]]></Data>
+      <Data Name="Definitions(C1)#HeaderText"><![CDATA[bank relationship risk]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[490]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

@@ -1,0 +1,39 @@
+# Vocabulary Properties
+uuid = 8c3f1004-a841-4334-a549-70743cfe2224
+
+# com.ibm.odm.data.DecisionAttribute
+com.ibm.odm.data.DecisionAttribute#concept.label = com.ibm.odm.data.DecisionAttribute
+com.ibm.odm.data.DecisionAttribute.age#instance.label = age
+com.ibm.odm.data.DecisionAttribute.checkingAccountBalance#instance.label = checking account balance
+com.ibm.odm.data.DecisionAttribute.coborrowerRole#instance.label = coborrower role
+com.ibm.odm.data.DecisionAttribute.combinedRisk#instance.label = combined risk
+com.ibm.odm.data.DecisionAttribute.creditHistory#instance.label = credit history
+com.ibm.odm.data.DecisionAttribute.dependents#instance.label = dependents
+com.ibm.odm.data.DecisionAttribute.housing#instance.label = housing
+com.ibm.odm.data.DecisionAttribute.installmentPercent#instance.label = installment percent
+com.ibm.odm.data.DecisionAttribute.installmentPlans#instance.label = installment plans
+com.ibm.odm.data.DecisionAttribute.isCitizen#instance.label = citizenship status
+com.ibm.odm.data.DecisionAttribute.jobType#instance.label = job type
+com.ibm.odm.data.DecisionAttribute.linesOfCredit#instance.label = lines of credit
+com.ibm.odm.data.DecisionAttribute.loanAmount#instance.label = loan amount
+com.ibm.odm.data.DecisionAttribute.loanDuration#instance.label = loan duration
+com.ibm.odm.data.DecisionAttribute.loanPurpose#instance.label = loan purpose
+com.ibm.odm.data.DecisionAttribute.phoneNumber#instance.label = phone number
+com.ibm.odm.data.DecisionAttribute.predictiveRiskComponent#instance.label = predictive risk component
+com.ibm.odm.data.DecisionAttribute.propertyOwnership#instance.label = property ownership
+com.ibm.odm.data.DecisionAttribute.relationshipRiskComponent#instance.label = relationship risk component
+com.ibm.odm.data.DecisionAttribute.savingsAccountBalance#instance.label = savings account balance
+com.ibm.odm.data.DecisionAttribute.sex#instance.label = sex
+com.ibm.odm.data.DecisionAttribute.yearsAtCurrentAddress#instance.label = years at current address
+com.ibm.odm.data.DecisionAttribute.yearsEmployed#instance.label = years employed
+com.ibm.odm.data.DecisionAttribute.yearsWithBank#instance.label = years with bank
+
+# com.ibm.odm.data.Payload
+com.ibm.odm.data.Payload#concept.label = payload
+com.ibm.odm.data.Payload.getBooleanValueVirtual(com.ibm.odm.data.DecisionAttribute)#phrase.navigation = the {0} boolean {this}
+com.ibm.odm.data.Payload.getIntValueVirtual(com.ibm.odm.data.DecisionAttribute)#phrase.navigation = the {0} integer {this}
+com.ibm.odm.data.Payload.getStringValueVirtual(com.ibm.odm.data.DecisionAttribute)#phrase.navigation = the {0} string {this}
+com.ibm.odm.data.Payload.isDefinedVirtual(com.ibm.odm.data.DecisionAttribute)#phrase.navigation = the {this} of {0} is defined
+com.ibm.odm.data.Payload.setBooleanValueVirtual(com.ibm.odm.data.DecisionAttribute,boolean)#phrase.action = set {0} boolean {this} to {1}
+com.ibm.odm.data.Payload.setIntValueVirtual(com.ibm.odm.data.DecisionAttribute,int)#phrase.action = set {0} integer {this} to {1}
+com.ibm.odm.data.Payload.setStringValueVirtual(com.ibm.odm.data.DecisionAttribute,java.lang.String)#phrase.action = set {0} string {this} to {1}

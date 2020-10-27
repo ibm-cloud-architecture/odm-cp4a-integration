@@ -1,0 +1,207 @@
+<b2x:translation xmlns:b2x="http://schemas.ilog.com/JRules/1.3/Translation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.ilog.com/JRules/1.3/Translation ilog/rules/schemas/1_3/b2x.xsd">
+    <id>d06e6902-ab70-47b9-ba32-85915474cb75</id>
+    <lang>ARL</lang>
+    <class>
+        <businessName>com.ibm.odm.data.DecisionAttribute</businessName>
+        <executionName>java.lang.String</executionName>
+        <attribute>
+            <name>age</name>
+            <getter language="irl"><![CDATA[
+            return "age";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>checkingAccountBalance</name>
+            <getter language="irl"><![CDATA[
+            return "checkingAccountBalance";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>coborrowerRole</name>
+            <getter language="irl"><![CDATA[
+            return "coborrowerRole";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>combinedRisk</name>
+            <getter language="irl"><![CDATA[
+            return "combinedRisk";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>creditHistory</name>
+            <getter language="irl"><![CDATA[
+            return "creditHistory";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>dependents</name>
+            <getter language="irl"><![CDATA[
+            return "dependents";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>housing</name>
+            <getter language="irl"><![CDATA[
+            return "housing";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>installmentPercent</name>
+            <getter language="irl"><![CDATA[
+            return "installmentPercent";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>installmentPlans</name>
+            <getter language="irl"><![CDATA[
+            return "installmentPlans";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>isCitizen</name>
+            <getter language="irl"><![CDATA[
+            return "isCitizen";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>jobType</name>
+            <getter language="irl"><![CDATA[
+            return "jobType";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>linesOfCredit</name>
+            <getter language="irl"><![CDATA[
+            return "linesOfCredit";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>loanAmount</name>
+            <getter language="irl"><![CDATA[
+            return "loanAmount";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>loanDuration</name>
+            <getter language="irl"><![CDATA[
+            return "loanDuration";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>loanPurpose</name>
+            <getter language="irl"><![CDATA[
+            return "loanPurpose";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>phoneNumber</name>
+            <getter language="irl"><![CDATA[
+            return "phoneNumber";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>predictiveRiskComponent</name>
+            <getter language="irl"><![CDATA[
+            return "predictiveRiskComponent";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>propertyOwnership</name>
+            <getter language="irl"><![CDATA[
+            return "propertyOwnership";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>relationshipRiskComponent</name>
+            <getter language="irl"><![CDATA[
+            return "relationshipRiskComponent";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>savingsAccountBalance</name>
+            <getter language="irl"><![CDATA[
+            return "savingsAccountBalance";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>sex</name>
+            <getter language="irl"><![CDATA[
+            return "sex";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>yearsAtCurrentAddress</name>
+            <getter language="irl"><![CDATA[
+            return "yearsAtCurrentAddress";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>yearsEmployed</name>
+            <getter language="irl"><![CDATA[
+            return "yearsEmployed";
+            ]]></getter>
+        </attribute>
+        <attribute>
+            <name>yearsWithBank</name>
+            <getter language="irl"><![CDATA[
+            return "yearsWithBank";
+            ]]></getter>
+        </attribute>
+    </class>
+    <class>
+        <businessName>com.ibm.odm.data.Payload</businessName>
+        <method>
+            <name>getBooleanValueVirtual</name>
+            <parameter type="com.ibm.odm.data.DecisionAttribute"/>
+            <body language="arl"><![CDATA[
+            return this.getBooleanValue(arg);
+            ]]></body>
+        </method>
+        <method>
+            <name>getIntValueVirtual</name>
+            <parameter type="com.ibm.odm.data.DecisionAttribute"/>
+            <body language="arl"><![CDATA[
+            return this.getIntValue(arg);
+            ]]></body>
+        </method>
+        <method>
+            <name>getStringValueVirtual</name>
+            <parameter type="com.ibm.odm.data.DecisionAttribute"/>
+            <body language="arl"><![CDATA[
+            return this.getStringValue(arg);
+            ]]></body>
+        </method>
+        <method>
+            <name>isDefinedVirtual</name>
+            <parameter type="com.ibm.odm.data.DecisionAttribute"/>
+            <body language="arl"><![CDATA[
+            return this.isDefined(arg);
+            ]]></body>
+        </method>
+        <method>
+            <name>setBooleanValueVirtual</name>
+            <parameter type="com.ibm.odm.data.DecisionAttribute"/>
+            <parameter type="boolean"/>
+            <body language="arl"><![CDATA[
+            this.setBooleanValue(key, value);
+            ]]></body>
+        </method>
+        <method>
+            <name>setIntValueVirtual</name>
+            <parameter type="com.ibm.odm.data.DecisionAttribute"/>
+            <parameter type="int"/>
+            <body language="arl"><![CDATA[
+            this.setIntValue(key, value);
+            ]]></body>
+        </method>
+        <method>
+            <name>setStringValueVirtual</name>
+            <parameter type="com.ibm.odm.data.DecisionAttribute"/>
+            <parameter type="java.lang.String"/>
+            <body language="arl"><![CDATA[
+            this.setStringValue(key, value);
+            ]]></body>
+        </method>
+    </class>
+</b2x:translation>

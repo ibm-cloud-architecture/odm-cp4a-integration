@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.dt:DecisionTable xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.dt="http://ilog.rules.studio/model/dt.ecore">
+  <name>evaluate bank relationship</name>
+  <uuid>2d4c44e7-5957-4845-8d07-9ed6fb3eb228</uuid>
+  <locale>en_US</locale>
+  <definition>
+<DT xmlns="http://schemas.ilog.com/Rules/7.0/DecisionTable" Version="7.0">
+  <Body>
+    <Properties>
+      <Property Name="Check.Gap" Type="xs:boolean"><![CDATA[false]]></Property>
+      <Property Name="Check.Overlap" Type="xs:boolean"><![CDATA[false]]></Property>
+    </Properties>
+    <Structure>
+      <ConditionDefinitions>
+        <ConditionDefinition Id="C1">
+          <ExpressionDefinition>
+            <Text><![CDATA[the years with bank integer value is <a number>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+        <ConditionDefinition Id="C0">
+          <ExpressionDefinition>
+            <Text><![CDATA[the value of savings account balance is defined is <a boolean>]]></Text>
+          </ExpressionDefinition>
+        </ConditionDefinition>
+      </ConditionDefinitions>
+      <ActionDefinitions>
+        <ActionDefinition Id="A0">
+          <ExpressionDefinition>
+            <Text><![CDATA[set relationship risk component string value to <a string>]]></Text>
+          </ExpressionDefinition>
+        </ActionDefinition>
+      </ActionDefinitions>
+    </Structure>
+    <Contents>
+      <Partition DefId="C1">
+        <Condition>
+          <Expression>
+            <Text><![CDATA[<a number> is more than <a number>]]></Text>
+            <Param><![CDATA[10]]></Param>
+          </Expression>
+          <Partition DefId="C0">
+            <Condition>
+              <Expression>
+                <Param/>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA["low"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Text><![CDATA[<a number> is more than <min> and at most <max>]]></Text>
+            <Param><![CDATA[3]]></Param>
+            <Param><![CDATA[10]]></Param>
+          </Expression>
+          <Partition DefId="C0">
+            <Condition>
+              <Expression/>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA["medium"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+        <Condition>
+          <Expression>
+            <Text><![CDATA[<a number> is at most <a number>]]></Text>
+            <Param><![CDATA[3]]></Param>
+          </Expression>
+          <Partition DefId="C0">
+            <Condition>
+              <Expression>
+                <Param><![CDATA[true]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA["medium"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+            <Condition>
+              <Expression>
+                <Param><![CDATA[false]]></Param>
+              </Expression>
+              <ActionSet>
+                <Action DefId="A0">
+                  <Expression>
+                    <Param><![CDATA["high"]]></Param>
+                  </Expression>
+                </Action>
+              </ActionSet>
+            </Condition>
+          </Partition>
+        </Condition>
+      </Partition>
+    </Contents>
+  </Body>
+  <Resources DefaultLocale="en_US">
+    <ResourceSet Locale="en_US">
+      <Data Name="Definitions(A0)#HeaderText"><![CDATA[relationship risk]]></Data>
+      <Data Name="Definitions(A0)#Width"><![CDATA[607]]></Data>
+      <Data Name="Definitions(C0)#HeaderText"><![CDATA[has savings]]></Data>
+      <Data Name="Definitions(C0)#Width"><![CDATA[266]]></Data>
+      <Data Name="Definitions(C1)#HeaderText"><![CDATA[years with bank]]></Data>
+      <Data Name="Definitions(C1)#Width"><![CDATA[510]]></Data>
+    </ResourceSet>
+  </Resources>
+</DT></definition>
+</ilog.rules.studio.model.dt:DecisionTable>

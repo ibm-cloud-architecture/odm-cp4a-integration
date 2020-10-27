@@ -1,0 +1,116 @@
+[
+  {
+    "_id": "fc66a140-074e-11eb-bc0d-3511e0b1ac2d",
+    "_type": "dashboard",
+    "_source": {
+      "title": "Risk - CC Assessment Dashboard",
+      "hits": 0,
+      "description": "",
+      "panelsJSON": "[\n  {\n    \"embeddableConfig\": {\n      \"vis\": {\n        \"colors\": {\n          \"high\": \"#BF1B00\",\n          \"medium\": \"#EF843C\"\n        },\n        \"legendOpen\": false\n      }\n    },\n    \"gridData\": {\n      \"x\": 0,\n      \"y\": 0,\n      \"w\": 14,\n      \"h\": 12,\n      \"i\": \"1\"\n    },\n    \"id\": \"7ed002d0-0758-11eb-bc0d-3511e0b1ac2d\",\n    \"panelIndex\": \"1\",\n    \"type\": \"visualization\",\n    \"version\": \"6.7.1\"\n  },\n  {\n    \"embeddableConfig\": {\n      \"vis\": {\n        \"colors\": {\n          \"high\": \"#BF1B00\",\n          \"medium\": \"#EF843C\"\n        },\n        \"legendOpen\": false\n      }\n    },\n    \"gridData\": {\n      \"x\": 14,\n      \"y\": 0,\n      \"w\": 13,\n      \"h\": 12,\n      \"i\": \"2\"\n    },\n    \"id\": \"b4298af0-0758-11eb-bc0d-3511e0b1ac2d\",\n    \"panelIndex\": \"2\",\n    \"type\": \"visualization\",\n    \"version\": \"6.7.1\"\n  },\n  {\n    \"gridData\": {\n      \"x\": 0,\n      \"y\": 12,\n      \"w\": 14,\n      \"h\": 7,\n      \"i\": \"3\"\n    },\n    \"version\": \"6.7.1\",\n    \"panelIndex\": \"3\",\n    \"type\": \"visualization\",\n    \"id\": \"49d036a0-075c-11eb-bc0d-3511e0b1ac2d\",\n    \"embeddableConfig\": {}\n  },\n  {\n    \"gridData\": {\n      \"x\": 14,\n      \"y\": 12,\n      \"w\": 13,\n      \"h\": 7,\n      \"i\": \"4\"\n    },\n    \"version\": \"6.7.1\",\n    \"panelIndex\": \"4\",\n    \"type\": \"visualization\",\n    \"id\": \"693308b0-075c-11eb-bc0d-3511e0b1ac2d\",\n    \"embeddableConfig\": {}\n  }\n]",
+      "optionsJSON": "{\n  \"darkTheme\": false,\n  \"hidePanelTitles\": false,\n  \"useMargins\": true\n}",
+      "version": 1,
+      "timeRestore": false,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": []\n}"
+      }
+    }
+  },
+  {
+    "_id": "178874a0-0757-11eb-bc0d-3511e0b1ac2d",
+    "_type": "search",
+    "_source": {
+      "title": "Risk - Challenger Combined Risk Value",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "data.lending.assess_risk.out.risk.combinedValue"
+      ],
+      "sort": [
+        "timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"dba-odm-timeseries-timestamp\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"dba-odm-timeseries-timestamp\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"rulesetPath\",\n        \"value\": \"/lending/1.0/assess_risk/1.1\",\n        \"params\": {\n          \"query\": \"/lending/1.0/assess_risk/1.1\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"rulesetPath\": {\n            \"query\": \"/lending/1.0/assess_risk/1.1\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    }
+  },
+  {
+    "_id": "d5d96c30-0756-11eb-bc0d-3511e0b1ac2d",
+    "_type": "search",
+    "_source": {
+      "title": "Risk - Champion Combined Risk Value",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "data.lending.assess_risk.out.risk.combinedValue"
+      ],
+      "sort": [
+        "timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"dba-odm-timeseries-timestamp\",\n  \"highlightAll\": true,\n  \"version\": true,\n  \"query\": {\n    \"language\": \"lucene\",\n    \"query\": \"\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"dba-odm-timeseries-timestamp\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"rulesetPath\",\n        \"value\": \"/lending/1.0/assess_risk/1.0\",\n        \"params\": {\n          \"query\": \"/lending/1.0/assess_risk/1.0\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"rulesetPath\": {\n            \"query\": \"/lending/1.0/assess_risk/1.0\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    }
+  },
+  {
+    "_id": "b4298af0-0758-11eb-bc0d-3511e0b1ac2d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Risk - Challenger Chart",
+      "visState": "{\n  \"title\": \"Challenger Visualization\",\n  \"type\": \"pie\",\n  \"params\": {\n    \"type\": \"pie\",\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"legendPosition\": \"right\",\n    \"isDonut\": true,\n    \"labels\": {\n      \"show\": false,\n      \"values\": true,\n      \"last_level\": true,\n      \"truncate\": 100\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"terms\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"field\": \"data.lending.assess_risk.out.risk.combinedValue.keyword\",\n        \"size\": 5,\n        \"order\": \"desc\",\n        \"orderBy\": \"1\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\"\n      }\n    }\n  ]\n}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"high\": \"#BF1B00\",\n      \"medium\": \"#EF843C\"\n    }\n  }\n}",
+      "description": "",
+      "savedSearchId": "178874a0-0757-11eb-bc0d-3511e0b1ac2d",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": []\n}"
+      }
+    }
+  },
+  {
+    "_id": "7ed002d0-0758-11eb-bc0d-3511e0b1ac2d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Risk - Champion Chart",
+      "visState": "{\n  \"title\": \"Champion Visualization\",\n  \"type\": \"pie\",\n  \"params\": {\n    \"type\": \"pie\",\n    \"addTooltip\": true,\n    \"addLegend\": true,\n    \"legendPosition\": \"right\",\n    \"isDonut\": true,\n    \"labels\": {\n      \"show\": false,\n      \"values\": true,\n      \"last_level\": true,\n      \"truncate\": 100\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    },\n    {\n      \"id\": \"2\",\n      \"enabled\": true,\n      \"type\": \"terms\",\n      \"schema\": \"segment\",\n      \"params\": {\n        \"field\": \"data.lending.assess_risk.out.risk.combinedValue.keyword\",\n        \"size\": 5,\n        \"order\": \"desc\",\n        \"orderBy\": \"1\",\n        \"otherBucket\": false,\n        \"otherBucketLabel\": \"Other\",\n        \"missingBucket\": false,\n        \"missingBucketLabel\": \"Missing\"\n      }\n    }\n  ]\n}",
+      "uiStateJSON": "{\n  \"vis\": {\n    \"colors\": {\n      \"high\": \"#BF1B00\",\n      \"medium\": \"#EF843C\"\n    }\n  }\n}",
+      "description": "",
+      "savedSearchId": "d5d96c30-0756-11eb-bc0d-3511e0b1ac2d",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": []\n}"
+      }
+    }
+  },
+  {
+    "_id": "693308b0-075c-11eb-bc0d-3511e0b1ac2d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Risk - Challenger Request Counter",
+      "visState": "{\n  \"title\": \"Challenger Count Visualization\",\n  \"type\": \"metric\",\n  \"params\": {\n    \"addTooltip\": true,\n    \"addLegend\": false,\n    \"type\": \"metric\",\n    \"metric\": {\n      \"percentageMode\": false,\n      \"useRanges\": false,\n      \"colorSchema\": \"Green to Red\",\n      \"metricColorMode\": \"None\",\n      \"colorsRange\": [\n        {\n          \"from\": 0,\n          \"to\": 10000\n        }\n      ],\n      \"labels\": {\n        \"show\": true\n      },\n      \"invertColors\": false,\n      \"style\": {\n        \"bgFill\": \"#000\",\n        \"bgColor\": false,\n        \"labelColor\": false,\n        \"subText\": \"\",\n        \"fontSize\": 60\n      }\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    }\n  ]\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"dba-odm-timeseries-timestamp\",\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"dba-odm-timeseries-timestamp\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"rulesetPath\",\n        \"value\": \"/lending/1.0/assess_risk/1.1\",\n        \"params\": {\n          \"query\": \"/lending/1.0/assess_risk/1.1\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"rulesetPath\": {\n            \"query\": \"/lending/1.0/assess_risk/1.1\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    }
+  },
+  {
+    "_id": "49d036a0-075c-11eb-bc0d-3511e0b1ac2d",
+    "_type": "visualization",
+    "_source": {
+      "title": "Risk - Champion Request Counter",
+      "visState": "{\n  \"title\": \"Champion Count Visualization\",\n  \"type\": \"metric\",\n  \"params\": {\n    \"addTooltip\": true,\n    \"addLegend\": false,\n    \"type\": \"metric\",\n    \"metric\": {\n      \"percentageMode\": false,\n      \"useRanges\": false,\n      \"colorSchema\": \"Green to Red\",\n      \"metricColorMode\": \"None\",\n      \"colorsRange\": [\n        {\n          \"from\": 0,\n          \"to\": 10000\n        }\n      ],\n      \"labels\": {\n        \"show\": true\n      },\n      \"invertColors\": false,\n      \"style\": {\n        \"bgFill\": \"#000\",\n        \"bgColor\": false,\n        \"labelColor\": false,\n        \"subText\": \"\",\n        \"fontSize\": 60\n      }\n    }\n  },\n  \"aggs\": [\n    {\n      \"id\": \"1\",\n      \"enabled\": true,\n      \"type\": \"count\",\n      \"schema\": \"metric\",\n      \"params\": {}\n    }\n  ]\n}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\n  \"index\": \"dba-odm-timeseries-timestamp\",\n  \"query\": {\n    \"query\": \"\",\n    \"language\": \"lucene\"\n  },\n  \"filter\": [\n    {\n      \"meta\": {\n        \"index\": \"dba-odm-timeseries-timestamp\",\n        \"negate\": false,\n        \"disabled\": false,\n        \"alias\": null,\n        \"type\": \"phrase\",\n        \"key\": \"rulesetPath\",\n        \"value\": \"/lending/1.0/assess_risk/1.0\",\n        \"params\": {\n          \"query\": \"/lending/1.0/assess_risk/1.0\",\n          \"type\": \"phrase\"\n        }\n      },\n      \"query\": {\n        \"match\": {\n          \"rulesetPath\": {\n            \"query\": \"/lending/1.0/assess_risk/1.0\",\n            \"type\": \"phrase\"\n          }\n        }\n      },\n      \"$state\": {\n        \"store\": \"appState\"\n      }\n    }\n  ]\n}"
+      }
+    }
+  }
+]

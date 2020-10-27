@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>no savings</name>
+  <uuid>65ca9f57-b8e1-40e5-8472-8e7db899b0ba</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	there is no account in the accounts of borrower where the type of this account is "savings",
+then
+	set predictor feature "ExistingSavings" to "unknown" ; 
+	]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

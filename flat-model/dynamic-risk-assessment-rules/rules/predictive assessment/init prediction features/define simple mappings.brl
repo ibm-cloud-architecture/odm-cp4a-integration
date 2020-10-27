@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>define simple mappings</name>
+  <uuid>a3d5cc3f-e264-48b5-8863-3b4b1512c979</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[then
+	set predictor feature "Sex" to the sex string value ; 
+	set predictor feature "Age" to the age integer value ; 
+	set predictor feature "Job" to the job type string value ; 
+	set predictor feature "Housing" to the housing string value ; 
+	set predictor feature "Dependents" to the dependents integer value ; 
+	set predictor feature "ExistingCreditsCount" to the lines of credit integer value ;  
+	set predictor feature "CurrentResidenceDuration" to the years at current address integer value ; 
+	set predictor feature "CreditHistory" to the credit history string value ;
+	set predictor feature "EmploymentDuration" to the years employed integer value ; 
+	set predictor feature "OwnsProperty" to the property ownership string value ;
+	set predictor feature "InstallmentPlans" to the installment plans string value ; 
+	
+	set predictor feature "LoanDuration" to the loan duration integer value ; 
+	set predictor feature "LoanAmount" to the loan amount integer value ; 
+	set predictor feature "InstallmentPercent" to the installment percent integer value ;
+	set predictor feature "LoanPurpose" to the loan purpose string value ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

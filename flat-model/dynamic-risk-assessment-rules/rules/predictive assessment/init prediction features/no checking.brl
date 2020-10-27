@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>no checking</name>
+  <uuid>71301b2d-dcf6-4d53-ba0e-c73347b742e0</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	it is not true that the value of checking account balance is defined 
+then
+	set predictor feature "CheckingStatus" to "no_checking" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

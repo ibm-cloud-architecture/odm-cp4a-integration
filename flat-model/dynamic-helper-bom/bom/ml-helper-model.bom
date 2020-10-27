@@ -1,0 +1,20 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/helper-bom/helper-ml-xom"
+property uuid "6fd51f57-8b85-4b14-acb1-a13a8439f8b7"
+package com.ibm.odm.ml;
+
+
+public class PredictionServices
+{
+    public PredictionServices(string arg1, string arg2);
+    public void addFeature(string arg1, string arg2);
+    public void addFeature(string arg1, int arg2);
+    public void clearFeatures();
+    public void defineFeature(string arg);
+    public static string runPredictionService(string arg1, string arg2, string arg3)
+                throws java.io.IOException;
+    public string runSinglePrediction(string arg)
+                throws java.lang.Exception;
+}
+

@@ -1,0 +1,38 @@
+<project name="tools" default="jar" basedir=".">
+
+	<property name="src.dir" location="${basedir}/src" />
+	<property name="bin.dir" location="${basedir}/bin" />
+	<property name="build.dir" location="${basedir}/build" />
+	
+	<path id="run.classpath">
+		<fileset dir="${build.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+		
+    <target name="clean" >
+        <delete dir="${bin.dir}"/>
+        <delete dir="${build.dir}"/>
+      	<mkdir dir="${bin.dir}"/>
+        <mkdir dir="${build.dir}"/>
+    </target>
+
+	<target name="compile" depends="clean" >
+		<javac srcdir="${src.dir}" destdir="${bin.dir}" includeantruntime="false" />
+	</target>
+
+	<target name="jar" depends="compile">
+		<jar jarfile="${build.dir}/requests-runner.jar" basedir="${bin.dir}" />
+	</target>
+		
+	<target name="run" depends="jar">
+		<java classname="com.ibm.odm.SampleRequestExecutor" fork="yes">
+			<classpath refid="run.classpath" />
+			<arg value="${champion}" />
+			<arg value="${challenger}" />
+			<arg value="${percent}" />
+		</java>
+	</target>
+
+</project>
+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>no savings</name>
+  <uuid>ccc883b0-ad11-4bf9-9da7-90a597408e2e</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	it is not true that the value of savings account balance is defined 
+then
+	set predictor feature "ExistingSavings" to "unknown" ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

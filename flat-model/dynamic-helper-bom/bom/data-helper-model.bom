@@ -1,0 +1,89 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/helper-bom//helper-data-xom"
+property uuid "83c39067-0293-4010-969b-174de202c0a2"
+package com.ibm.odm.data;
+
+
+public class DecisionAttribute
+        extends string
+        property "com.ibm.rules.domainProvider.msexcel.b2xColumn" "2"
+        property "com.ibm.rules.domainProvider.msexcel.hasHeader" "true"
+        property "com.ibm.rules.domainProvider.msexcel.labelColumn.en" "1"
+        property "com.ibm.rules.domainProvider.msexcel.sheetIndex" "0"
+        property "com.ibm.rules.domainProvider.msexcel.valueColumn" "0"
+        property domainProviderResource "domains.xlsx"
+        property domainValueProviderName "com.ibm.rules.domainProvider.msexcel2007"
+{
+    domain 
+    {
+        static age,
+        static creditHistory,
+        static yearsEmployed,
+        static yearsAtCurrentAddress,
+        static yearsWithBank,
+        static jobType,
+        static sex,
+        static linesOfCredit,
+        static dependents,
+        static phoneNumber,
+        static isCitizen,
+        static housing,
+        static propertyOwnership,
+        static installmentPlans,
+        static checkingAccountBalance,
+        static savingsAccountBalance,
+        static loanDuration,
+        static loanPurpose,
+        static loanAmount,
+        static installmentPercent,
+        static coborrowerRole,
+        static predictiveRiskComponent,
+        static relationshipRiskComponent,
+        static combinedRisk
+    }
+    public static final readonly com.ibm.odm.data.DecisionAttribute age;
+    public static final readonly com.ibm.odm.data.DecisionAttribute checkingAccountBalance;
+    public static final readonly com.ibm.odm.data.DecisionAttribute coborrowerRole;
+    public static final readonly com.ibm.odm.data.DecisionAttribute combinedRisk;
+    public static final readonly com.ibm.odm.data.DecisionAttribute creditHistory;
+    public static final readonly com.ibm.odm.data.DecisionAttribute dependents;
+    public static final readonly com.ibm.odm.data.DecisionAttribute housing;
+    public static final readonly com.ibm.odm.data.DecisionAttribute installmentPercent;
+    public static final readonly com.ibm.odm.data.DecisionAttribute installmentPlans;
+    public static final readonly com.ibm.odm.data.DecisionAttribute isCitizen;
+    public static final readonly com.ibm.odm.data.DecisionAttribute jobType;
+    public static final readonly com.ibm.odm.data.DecisionAttribute linesOfCredit;
+    public static final readonly com.ibm.odm.data.DecisionAttribute loanAmount;
+    public static final readonly com.ibm.odm.data.DecisionAttribute loanDuration;
+    public static final readonly com.ibm.odm.data.DecisionAttribute loanPurpose;
+    public static final readonly com.ibm.odm.data.DecisionAttribute phoneNumber;
+    public static final readonly com.ibm.odm.data.DecisionAttribute predictiveRiskComponent;
+    public static final readonly com.ibm.odm.data.DecisionAttribute propertyOwnership;
+    public static final readonly com.ibm.odm.data.DecisionAttribute relationshipRiskComponent;
+    public static final readonly com.ibm.odm.data.DecisionAttribute savingsAccountBalance;
+    public static final readonly com.ibm.odm.data.DecisionAttribute sex;
+    public static final readonly com.ibm.odm.data.DecisionAttribute yearsAtCurrentAddress;
+    public static final readonly com.ibm.odm.data.DecisionAttribute yearsEmployed;
+    public static final readonly com.ibm.odm.data.DecisionAttribute yearsWithBank;
+}
+
+public class Payload
+{
+    public Payload();
+    public boolean getBooleanValue(string arg);
+    public boolean getBooleanValueVirtual(com.ibm.odm.data.DecisionAttribute arg);
+    public int getIntValue(string arg);
+    public int getIntValueVirtual(com.ibm.odm.data.DecisionAttribute arg);
+    public string getStringValue(string arg);
+    public string getStringValueVirtual(com.ibm.odm.data.DecisionAttribute arg);
+    public boolean isDefined(string arg);
+    public boolean isDefinedVirtual(com.ibm.odm.data.DecisionAttribute arg);
+    public void setBooleanValue(string arg1, boolean arg2);
+    public void setBooleanValueVirtual(com.ibm.odm.data.DecisionAttribute key, boolean value);
+    public void setIntValue(string arg1, int arg2);
+    public void setIntValueVirtual(com.ibm.odm.data.DecisionAttribute key, int value);
+    public void setStringValue(string arg1, string arg2);
+    public void setStringValueVirtual(com.ibm.odm.data.DecisionAttribute key, string value);
+}
+

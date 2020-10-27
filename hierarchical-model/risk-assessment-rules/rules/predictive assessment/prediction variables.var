@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>prediction variables</name>
+  <uuid>e605f262-b697-4fab-b9b7-5340290901f8</uuid>
+  <variables name="rawRiskValue" type="java.lang.String" initialValue="" verbalization="predicted risk"/>
+</ilog.rules.studio.model.base:VariableSet>

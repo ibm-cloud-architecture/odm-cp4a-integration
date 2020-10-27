@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>risk assessment flow</name>
+  <uuid>242ceee9-c91a-44d4-85bc-8c30352caa2d</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0">
+        <Actions Language="irl"><![CDATA[borrower = loan.borrower;]]>&#13;<![CDATA[
+predictor = new com.ibm.odm.ml.PredictionServices(wmlEndpoint, wmlToken);]]></Actions>
+      </StartTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="relationship assessment" Ordering="Default">
+        <FinalActions Language="bal"><![CDATA[print "Relationship assessment: " + the name of the relationship component of risk ;]]></FinalActions>
+        <RuleList>
+          <Package Name="relationship assessment"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="combined assessment" Ordering="Default">
+        <FinalActions Language="bal"><![CDATA[print "Combined risk assessment: " + the name of the combined value of risk ;]]></FinalActions>
+        <RuleList>
+          <Package Name="combined assessment"/>
+        </RuleList>
+      </RuleTask>
+      <SubflowTask Identifier="predictive assessment" Uuid="d82a5f08-9577-418b-9160-27cf404c0aab">
+        <FinalActions Language="bal"><![CDATA[print "Predictive assessment: " + the name of the predictive component of risk  ;]]></FinalActions>
+      </SubflowTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="relationship assessment"/>
+      <ForkNode Identifier="node_4"/>
+      <JoinNode Identifier="node_5"/>
+      <TaskNode Identifier="node_6" Task="combined assessment"/>
+      <TaskNode Identifier="node_7" Task="predictive assessment"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_4"/>
+      <Transition Identifier="transition_2" Source="node_6" Target="node_1"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_2"/>
+      <Transition Identifier="transition_4" Source="node_2" Target="node_5"/>
+      <Transition Identifier="transition_6" Source="node_5" Target="node_6"/>
+      <Transition Identifier="transition_7" Source="node_4" Target="node_7"/>
+      <Transition Identifier="transition_8" Source="node_7" Target="node_5"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_2#height">53.402344</Data>
+      <Data Name="node_4#width">100.0</Data>
+      <Data Name="node_1#height">22.0</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#height">10.0</Data>
+      <Data Name="node_7#y">165.05176</Data>
+      <Data Name="node_5#name">node_7</Data>
+      <Data Name="node_2#name">node_2</Data>
+      <Data Name="node_5#height">10.0</Data>
+      <Data Name="node_6#height">53.402344</Data>
+      <Data Name="node_7#height">68.103516</Data>
+      <Data Name="node_7#width">106.02539</Data>
+      <Data Name="node_2#width">109.359375</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_4#x">134.35889</Data>
+      <Data Name="node_4#y">76.0</Data>
+      <Data Name="node_5#x">134.35889</Data>
+      <Data Name="node_5#y">254.10352</Data>
+      <Data Name="node_6#x">134.35889</Data>
+      <Data Name="node_5#width">100.0</Data>
+      <Data Name="node_6#y">335.8047</Data>
+      <Data Name="node_7#x">55.012695</Data>
+      <Data Name="node_0#x">134.35889</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_1#x">134.35889</Data>
+      <Data Name="node_1#y">423.50586</Data>
+      <Data Name="node_2#x">215.70508</Data>
+      <Data Name="node_2#y">165.05176</Data>
+      <Data Name="node_7#label">predictive assessment</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_4#name">node_7</Data>
+      <Data Name="node_7#name">node_7</Data>
+      <Data Name="node_1#width">22.0</Data>
+      <Data Name="node_6#name">node_6</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_6#width">109.359375</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties>
+    <imports><![CDATA[import com.ibm.odm.ml.PredictionServices;
+]]></imports>
+  </Properties>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

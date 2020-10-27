@@ -1,0 +1,67 @@
+
+property loadGetterSetterAsProperties "true"
+property origin "xom:/risk-assessment-bom/risk-assessment-xom"
+property uuid "1fda91ef-17d7-40ec-8c20-e2ac3c1528d5"
+package com.ibm.odm;
+
+
+public class Account
+{
+    public int balance;
+    public string type;
+    public Account();
+}
+
+public class Borrower
+{
+    public java.util.List accounts domain 0,* class com.ibm.odm.Account;
+    public boolean citizen;
+    public string creditHistory;
+    public java.util.Date dateOfBirth;
+    public int dependents;
+    public string housing;
+    public string installmentPlans;
+    public string jobType;
+    public int linesOfCredit;
+    public string phoneNumber;
+    public string propertyOwnership;
+    public string role;
+    public string sex;
+    public int yearsAtCurrentAddress;
+    public string yearsEmployed;
+    public int yearsWithBank;
+    public Borrower();
+    public int getAge();
+}
+
+public class Loan
+{
+    public com.ibm.odm.Borrower borrower;
+    public com.ibm.odm.Borrower coBorrower;
+    public int duration;
+    public int installmentPercent;
+    public int loanAmount;
+    public string loanPurpose;
+    public Loan();
+}
+
+public class Risk
+{
+
+    static public final class Level
+            extends java.lang.Enum
+    {
+        domain {static low, static medium, static high}
+        public static final readonly com.ibm.odm.Risk.Level high;
+        public static final readonly com.ibm.odm.Risk.Level low;
+        public static final readonly com.ibm.odm.Risk.Level medium;
+        public string value();
+        public static com.ibm.odm.Risk.Level valueOf(string arg);
+        public static com.ibm.odm.Risk.Level[] values();
+    }
+    public com.ibm.odm.Risk.Level combinedValue;
+    public com.ibm.odm.Risk.Level predictiveComponent;
+    public com.ibm.odm.Risk.Level relationshipComponent;
+    public Risk();
+}
+

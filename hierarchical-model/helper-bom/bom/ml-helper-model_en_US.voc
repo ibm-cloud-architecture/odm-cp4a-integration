@@ -1,0 +1,9 @@
+# Vocabulary Properties
+uuid = 53a93677-f315-4747-b5a9-1f361f3456c0
+
+# com.ibm.odm.ml.PredictionServices
+com.ibm.odm.ml.PredictionServices#concept.label = prediction services
+com.ibm.odm.ml.PredictionServices.addFeature(java.lang.String,int)#phrase.action = set {this} feature {0} to {1}
+com.ibm.odm.ml.PredictionServices.addFeature(java.lang.String,java.lang.String)#phrase.action = set {this} feature {0} to {1}
+com.ibm.odm.ml.PredictionServices.defineFeature(java.lang.String)#phrase.action = add feature {0} to {this}
+com.ibm.odm.ml.PredictionServices.runSinglePrediction(java.lang.String)#phrase.navigation = the value of {0} calculated with {this} 

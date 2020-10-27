@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.ruleflow:RuleFlow xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.ruleflow="http://ilog.rules.studio/model/ruleflow.ecore">
+  <name>risk prediction flow</name>
+  <uuid>d82a5f08-9577-418b-9160-27cf404c0aab</uuid>
+  <locale>en_US</locale>
+  <categories>any</categories>
+  <rfModel>
+<Ruleflow xmlns="http://schemas.ilog.com/Rules/7.0/Ruleflow">
+  <Body>
+    <TaskList>
+      <StartTask Identifier="task_0">
+        <Actions Language="bal"><![CDATA[  add feature "CheckingStatus" to predictor ;]]>&#13;<![CDATA[
+  add feature "LoanDuration" to predictor ;]]>&#13;<![CDATA[
+  add feature "CreditHistory" to predictor ;]]>&#13;<![CDATA[
+  add feature "LoanPurpose" to predictor ;]]>&#13;<![CDATA[
+  add feature "LoanAmount" to predictor ;]]>&#13;<![CDATA[
+  add feature "ExistingSavings" to predictor ;]]>&#13;<![CDATA[
+  add feature "EmploymentDuration" to predictor ;]]>&#13;<![CDATA[
+  add feature "InstallmentPercent" to predictor ;]]>&#13;<![CDATA[
+  add feature "Sex" to predictor ;]]>&#13;<![CDATA[
+  add feature "OthersOnLoan" to predictor ;]]>&#13;<![CDATA[
+  add feature "CurrentResidenceDuration" to predictor ;]]>&#13;<![CDATA[
+  add feature "OwnsProperty" to predictor ;]]>&#13;<![CDATA[
+  add feature "Age" to predictor ;]]>&#13;<![CDATA[
+  add feature "InstallmentPlans" to predictor ;]]>&#13;<![CDATA[
+  add feature "Housing" to predictor ;]]>&#13;<![CDATA[
+  add feature "ExistingCreditsCount" to predictor ;]]>&#13;<![CDATA[
+  add feature "Job" to predictor ;]]>&#13;<![CDATA[
+  add feature "Dependents" to predictor ;]]>&#13;<![CDATA[
+  add feature "Telephone" to predictor ;]]>&#13;<![CDATA[
+  add feature "ForeignWorker" to predictor ;]]>&#13;<![CDATA[
+  ]]></Actions>
+      </StartTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="init prediction features" Ordering="Default">
+        <RuleList>
+          <Package Name="predictive assessment.init prediction features"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="run prediction" Ordering="Default">
+        <RuleList>
+          <Package Name="predictive assessment.run prediction"/>
+        </RuleList>
+      </RuleTask>
+      <RuleTask ExecutionMode="Fastpath" ExitCriteria="None" Identifier="set prediction result" Ordering="Default">
+        <RuleList>
+          <Package Name="predictive assessment.set prediction result"/>
+        </RuleList>
+      </RuleTask>
+      <StopTask Identifier="task_1"/>
+    </TaskList>
+    <NodeList>
+      <TaskNode Identifier="node_0" Task="task_0"/>
+      <TaskNode Identifier="node_1" Task="task_1"/>
+      <TaskNode Identifier="node_2" Task="init prediction features"/>
+      <TaskNode Identifier="node_3" Task="run prediction"/>
+      <TaskNode Identifier="node_4" Task="set prediction result"/>
+    </NodeList>
+    <TransitionList>
+      <Transition Identifier="transition_0" Source="node_0" Target="node_2"/>
+      <Transition Identifier="transition_1" Source="node_2" Target="node_3"/>
+      <Transition Identifier="transition_2" Source="node_3" Target="node_4"/>
+      <Transition Identifier="transition_3" Source="node_4" Target="node_1"/>
+    </TransitionList>
+  </Body>
+  <Resources>
+    <ResourceSet Locale="en_US">
+      <Data Name="node_2#height">68.103516</Data>
+      <Data Name="node_4#width">102.0</Data>
+      <Data Name="node_1#height">19.999987</Data>
+      <Data Name="node_3#height">53.402344</Data>
+      <Data Name="node_0#height">21.0</Data>
+      <Data Name="node_4#height">68.103516</Data>
+      <Data Name="node_1#name">node_2</Data>
+      <Data Name="node_3#width">102.0</Data>
+      <Data Name="node_1#width">20.000004</Data>
+      <Data Name="node_0#name">node_0</Data>
+      <Data Name="node_2#width">102.0</Data>
+      <Data Name="node_0#width">21.0</Data>
+      <Data Name="node_3#y">215.80469</Data>
+      <Data Name="node_4#x">51.0</Data>
+      <Data Name="node_4#y">326.55762</Data>
+      <Data Name="node_0#x">51.0</Data>
+      <Data Name="node_0#y">10.5</Data>
+      <Data Name="node_1#x">51.0</Data>
+      <Data Name="node_1#y">420.60938</Data>
+      <Data Name="node_2#x">51.0</Data>
+      <Data Name="node_2#y">105.05176</Data>
+      <Data Name="node_3#x">51.0</Data>
+    </ResourceSet>
+  </Resources>
+  <Properties/>
+</Ruleflow></rfModel>
+</ilog.rules.studio.model.ruleflow:RuleFlow>

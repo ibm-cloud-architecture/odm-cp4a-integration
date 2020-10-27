@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenarioSuiteFormat locale="EN" name="LoanTestDataProvider"
+	version="1.0" xmlns="http://schemas.ibm.com/rules/cdi/format"
+	xmlns:jsl="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://schemas.ibm.com/rules/cdi/format scenarioSuiteFormat_1_0.xsd "
+	displayName="Credit Risk Scenario Provider">
+	<properties>
+		<property name="dataset.name" xsi:type="stringProperty"
+			displayName="Dataset name" >
+			<value>gcr-simulation-data</value>
+		</property>
+	</properties>	
+	<jobDescriptor>
+		<jsl:job xmlns="http://xmlns.jcp.org/xml/ns/javaee" id="simulation1" version="1.0">
+
+			<jsl:properties>
+				<jsl:property name="execution.ruleset.path" value="#{jobParameters['execution.ruleset.path']}"></jsl:property>
+				<jsl:property name="execution.ruleapp.undeploy" value="#{jobParameters['execution.ruleapp.undeploy']}"></jsl:property>
+				<jsl:property name="execution.flow.task" value="#{jobParameters['execution.flow.task']}"></jsl:property>
+				<jsl:property name="execution.user.data" value="#{jobParameters['execution.user.data']}"></jsl:property>
+				<jsl:property name="execution.estimated.scenario.count" value="10"></jsl:property>
+				<jsl:property name="execution.scenario.persistence.policy" value="All"></jsl:property>
+			</jsl:properties>
+			<jsl:listeners>
+				<jsl:listener ref="com.ibm.rules.cdi.runtime.batch.listeners.JobListener" />
+			</jsl:listeners>
+			<jsl:step id="execution1">
+				<jsl:listeners>
+					<jsl:listener ref="com.ibm.rules.cdi.runtime.batch.listeners.ScenarioReadListener" />
+					<jsl:listener ref="com.ibm.rules.cdi.runtime.batch.listeners.ScenarioChunkListener" />
+				</jsl:listeners>
+				<jsl:chunk item-count="10">
+					<jsl:reader ref="com.ibm.odm.simulation.ScenarioReader">
+						<jsl:properties>							
+							<jsl:property name="dataset.name" value="#{jobParameters['dataset.name']}"></jsl:property>
+						</jsl:properties>
+					</jsl:reader>
+					<jsl:processor ref="com.ibm.rules.cdi.runtime.batch.artifacts.ScenarioProcessor" />
+					<jsl:writer ref="com.ibm.rules.cdi.runtime.batch.artifacts.ScenarioWriter" />
+				</jsl:chunk>
+			</jsl:step>
+		</jsl:job>
+	</jobDescriptor>
+</scenarioSuiteFormat>

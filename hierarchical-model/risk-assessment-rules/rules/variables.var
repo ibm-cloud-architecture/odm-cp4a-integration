@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>variables</name>
+  <uuid>8fadbe22-2bd9-4967-b142-a36a3dc03487</uuid>
+  <variables name="borrower" type="com.ibm.odm.Borrower" initialValue="" verbalization="borrower"/>
+  <variables name="predictor" type="com.ibm.odm.ml.PredictionServices" initialValue="" verbalization="predictor"/>
+  <variables name="wmlToken" type="java.lang.String" initialValue="&quot;&lt;var:your-wml-token>&quot;" verbalization="wml token"/>
+  <variables name="wmlEndpoint" type="java.lang.String" initialValue="&quot;&lt;var:your-cluster-url>&quot;" verbalization="wml endpoint"/>
+  <variables name="loan" type="com.ibm.odm.Loan" initialValue="" verbalization="loan"/>
+  <variables name="risk" type="com.ibm.odm.Risk" initialValue="new com.ibm.odm.Risk()" verbalization="risk"/>
+  <variables name="riskScoringResource" type="java.lang.String" initialValue="" verbalization="risk scoring"/>
+</ilog.rules.studio.model.base:VariableSet>

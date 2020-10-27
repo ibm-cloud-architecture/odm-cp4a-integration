@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>set others on loan</name>
+  <uuid>189f8415-10ca-4cc1-8f59-38f51c8a8d99</uuid>
+  <locale>en_US</locale>
+  <definition><![CDATA[if
+	it is not true that the value of coborrower role is defined  
+then
+	set predictor feature "OthersOnLoan" to "none" ;
+else
+	set predictor feature "OthersOnLoan" to the coborrower role string value ;
+]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

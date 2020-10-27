@@ -1,0 +1,59 @@
+# Vocabulary Properties
+uuid = cf65e1b9-47e1-4647-9921-4fddd43a6086
+
+# com.ibm.odm.Account
+com.ibm.odm.Account#concept.label = account
+com.ibm.odm.Account.balance#phrase.action = set the balance of {this} to {balance}
+com.ibm.odm.Account.balance#phrase.navigation = {balance} of {this}
+com.ibm.odm.Account.type#phrase.action = set the type of {this} to {type}
+com.ibm.odm.Account.type#phrase.navigation = {type} of {this}
+
+# com.ibm.odm.Borrower
+com.ibm.odm.Borrower#concept.label = borrower
+com.ibm.odm.Borrower.accounts#phrase.navigation = {account} of {this}
+com.ibm.odm.Borrower.citizen#phrase.navigation = {this} is citizen
+com.ibm.odm.Borrower.creditHistory#phrase.navigation = {credit history} of {this}
+com.ibm.odm.Borrower.dateOfBirth#phrase.navigation = {date of birth} of {this}
+com.ibm.odm.Borrower.dependents#phrase.navigation = {dependents} of {this}
+com.ibm.odm.Borrower.getAge()#phrase.navigation = {age} of {this}
+com.ibm.odm.Borrower.housing#phrase.navigation = {housing} of {this}
+com.ibm.odm.Borrower.installmentPlans#phrase.navigation = {installment plans} of {this}
+com.ibm.odm.Borrower.jobType#phrase.navigation = {job type} of {this}
+com.ibm.odm.Borrower.linesOfCredit#phrase.navigation = {lines of credit} of {this}
+com.ibm.odm.Borrower.phoneNumber#phrase.navigation = {phone number} of {this}
+com.ibm.odm.Borrower.propertyOwnership#phrase.navigation = {property ownership} of {this}
+com.ibm.odm.Borrower.role#phrase.navigation = {role} of {this}
+com.ibm.odm.Borrower.sex#phrase.navigation = {sex} of {this}
+com.ibm.odm.Borrower.yearsAtCurrentAddress#phrase.navigation = {years at current address} of {this}
+com.ibm.odm.Borrower.yearsEmployed#phrase.action = set the years employed of {this} to {years employed}
+com.ibm.odm.Borrower.yearsEmployed#phrase.navigation = {years employed} of {this}
+com.ibm.odm.Borrower.yearsWithBank#phrase.navigation = {years with bank} of {this}
+
+# com.ibm.odm.Loan
+com.ibm.odm.Loan#concept.label = loan
+com.ibm.odm.Loan.borrower#phrase.navigation = {borrower} of {this}
+com.ibm.odm.Loan.coBorrower#phrase.navigation = {co-borrower} of {this}
+com.ibm.odm.Loan.duration#phrase.action = set the duration of {this} to {duration}
+com.ibm.odm.Loan.duration#phrase.navigation = {duration} of {this}
+com.ibm.odm.Loan.installmentPercent#phrase.action = set the installment percent of {this} to {installment percent}
+com.ibm.odm.Loan.installmentPercent#phrase.navigation = {installment percent} of {this}
+com.ibm.odm.Loan.loanAmount#phrase.action = set the loan amount of {this} to {loan amount}
+com.ibm.odm.Loan.loanAmount#phrase.navigation = {loan amount} of {this}
+com.ibm.odm.Loan.loanPurpose#phrase.action = set the loan purpose of {this} to {loan purpose}
+com.ibm.odm.Loan.loanPurpose#phrase.navigation = {loan purpose} of {this}
+
+# com.ibm.odm.Risk
+com.ibm.odm.Risk#concept.label = risk
+
+# com.ibm.odm.Risk.Level
+com.ibm.odm.Risk.Level#concept.label = level
+com.ibm.odm.Risk.Level.high#instance.label = high
+com.ibm.odm.Risk.Level.low#instance.label = low
+com.ibm.odm.Risk.Level.medium#instance.label = medium
+com.ibm.odm.Risk.Level.value()#phrase.navigation = the name of {this}
+com.ibm.odm.Risk.combinedValue#phrase.action = set the combined value of {this} to {combined value}
+com.ibm.odm.Risk.combinedValue#phrase.navigation = {combined value} of {this}
+com.ibm.odm.Risk.predictiveComponent#phrase.action = set the predictive component of {this} to {predictive component}
+com.ibm.odm.Risk.predictiveComponent#phrase.navigation = {predictive component} of {this}
+com.ibm.odm.Risk.relationshipComponent#phrase.action = set the relationship component of {this} to {relationship component}
+com.ibm.odm.Risk.relationshipComponent#phrase.navigation = {relationship component} of {this}

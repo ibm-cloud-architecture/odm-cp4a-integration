@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:VariableSet xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>variables</name>
+  <uuid>b750a53a-8829-42bb-9f9b-0ce068d29b1b</uuid>
+  <variables name="predictor" type="com.ibm.odm.ml.PredictionServices" initialValue="" verbalization="predictor"/>
+  <variables name="wmlToken" type="java.lang.String" initialValue="&quot;&lt;var:your-wml-token>&quot;" verbalization="wml token"/>
+  <variables name="wmlEndpoint" type="java.lang.String" initialValue="&quot;&lt;var:your-cp4d-cluster-url>&quot;" verbalization="wml endpoint"/>
+  <variables name="riskScoringResource" type="java.lang.String" initialValue="&quot;/v4/deployments/0d5b93f2-7bdf-4c27-b71f-21914573b9c9/predictions&quot;" verbalization="risk scoring"/>
+  <variables name="payload" type="com.ibm.odm.data.Payload" initialValue="" verbalization="value"/>
+</ilog.rules.studio.model.base:VariableSet>

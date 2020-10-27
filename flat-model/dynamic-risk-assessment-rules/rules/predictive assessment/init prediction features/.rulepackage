@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.base:RulePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore">
+  <name>init prediction features</name>
+  <uuid>93bd441f-2c20-4816-b28a-0b5df2bb214c</uuid>
+</ilog.rules.studio.model.base:RulePackage>
