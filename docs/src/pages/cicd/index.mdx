@@ -9,16 +9,17 @@ description: Integrating ODM in a CI/CD pipeline
 </InlineNotification>
 
 # CI/CD with ODM
-Continuous integration and continuous deployment for ODM can be supported through the REST API of Decision Center. The documentation for the API is found [here](https://www.ibm.com/support/knowledgecenter/SSQP76_8.10.x/com.ibm.odm.dcenter.ref.dc/topics/dc-swagger-cloud.json).
+Continuous integration and continuous deployment for ODM can be supported through the use of the Decision Center REST API.
 
-The core REST resources used for CI/CD, listed under the *Build* section, are:
+The documentation for this API is found [here](https://www.ibm.com/support/knowledgecenter/SSQP76_8.10.x/com.ibm.odm.dcenter.ref.dc/topics/dc-swagger-cloud.json).
+The core REST resources used for CI/CD purpose are listed under the *Build* section:
 - `/v1/testsuites/{testSuiteId}/run`: allows to run a test suite on Decision Center.
 - `/v1/deployments/{deploymentId}/deploy`: allows to deploy a RuleApp to a Decision Server runtime.
 
-Resources under the `Explore` section allow to explore and select the desired `{testSuiteId}` or `{deploymentId}`.
+Other resources under the `Explore` section allow to explore and select the desired `{testSuiteId}` or `{deploymentId}`.
 
 ## Try it!
-You can quickly explore the DecisionCenter REST API from a tool such as Postman. Let's try running a test suite.
+You can quickly explore the DecisionCenter REST API from a tool such as Postman. Let's try for example to run an ODM test suite that has been previosuly defined .
 
 - In order to designate the test suite you want to run, you need the id of the test suite. So, you start by querying the existing decision services using the `/v1/decisionservices` resource, as shown below:
 
