@@ -2,10 +2,16 @@
 *.sem
 /output/
 .metadata
+.cache
+node_modules
+docs/public
 */reports/*
 deployment
 .syncEntries
 derby.log
 *~
+.#*
+\#*
+
 
 

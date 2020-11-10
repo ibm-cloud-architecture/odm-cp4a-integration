@@ -1,12 +1,18 @@
 - title: Introduction
   pages:
     - path: /introduction/
-- title: Configuration
-  pages:
-    - path: /configuration/
 - title: Use case
   pages:
     - path: /usecase/
+- title: Configuration
+  pages:
+    - path: /configuration/
+- title: Content
+  pages:
+    - path: /content/
+- title: Integration
+  pages:
+    - path: /integration/
 - title: Champion-Challenger
   pages:
     - path: /champchall/

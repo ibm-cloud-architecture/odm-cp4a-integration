@@ -3,10 +3,22 @@ title: Use case
 description: Description of the use case
 ---
 
-
 <InlineNotification kind="warning">
 <strong>Updated 10/26/2020</strong> - Work in progress
 </InlineNotification>
 
 
 ## Use case
+Running ML-based scoring models as part of a rule-based decision service is a widespread need. It is almost always a requirement for solutions that involve, for example:
+- Evaluating risk for underwriting a contract
+- Assessing fraud potential for a financial transaction or claim.
+
+The business scenario underlying the solutions provided in this repo is about evaluating bank credit risk.
+The goal is to show how to combine the Operational Decision Manager (ODM) component from the IBM Cloud Pak for Automation with the IBM Cloud Pak for Data platform to create, simulate, manage, and operationalize a loan risk evaluation decision service. This service uses:
+
+- A predictive scoring component that relies on a ML model for loan default. The basis we're using for this component is the well-know German Credit Risk classification [data](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)).
+- Explicit business rules for compounding risk estimates based on established company policies. For example, the bank may want to explicitly favor employees of the bank and their family and pre-emptively reduce their risk score.
+
+
+
+
