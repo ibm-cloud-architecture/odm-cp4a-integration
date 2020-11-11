@@ -2,13 +2,18 @@
 *.sem
 /output/
 .metadata
-.cache
-node_modules
-docs/public
 */reports/*
 deployment
 .syncEntries
 derby.log
+
+## For local doc generate files
+docs/.cache
+docs/node_modules
+docs/public
+
+## For emacs and ms leftovers
+~$*
 *~
 .#*
 \#*
