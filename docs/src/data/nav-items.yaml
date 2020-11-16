@@ -4,24 +4,21 @@
 - title: Use case
   pages:
     - path: /usecase/
-- title: Configuration
+- title: Solution configuration
   pages:
     - path: /configuration/
-- title: Content
-  pages:
-    - path: /content/
-- title: Integration
+- title: ODM-WML integration
   pages:
     - path: /integration/
-- title: Champion-Challenger
+- title: Champion-Challenger with BAI
   pages:
     - path: /champchall/
-- title: Simulation
+- title: Large scale simulation
   pages:
-    - title: Scenario Provider
+    - title: Scenario provider
       path: /simulation/provider/
-    - title: Large Scale Simulation
-      path: /simulation/largescale/
+    - title: Spark grid execution
+      path: /simulation/spark/
 - title: CI/CD with ODM
   pages:
     - path: /cicd/

@@ -1,29 +1,28 @@
 ---
 title: Introduction
-description: ODM Integration with Watson ML in CP4D
+description: ODM integration with WML
 ---
 
-<InlineNotification kind="warning">
-<strong>Updated 11/09/2020</strong> - Work in progress
-</InlineNotification>
+This use case addresses different aspects of the integration of rule-based decision services with machine learning-based scoring services. More specifically, it presents the integration of Operational Decision Manager (ODM), which is part of the IBM Cloud Pak for Automation, with Watson ML (WML), part of the IBM Cloud Pak for Data (CP4D).
 
-This repository addresses different aspects around the integration of rule-based decision services with machine learning-based scoring services. More specifically, it presents the integration of Operational Decision Manager (ODM), from the Cloud Pak for Automation, with Watson ML (WML), from the Cloud Pack for Data (CP4D).
+It illustrates non-functional architecture details such as security and performance, as well as functional topics such as building a pattern to invoke a WML service from ODM, or design options for the ODM execution and business object model.
+For each topic, we try as much as possible to provide you with a working implamentation, as well as detailed steps to exercise the code for yourself, assuming you are familiar with the ODM platform.
 
-It illustrates non-functional architecture details such as security and performance, as well as functional topics such as best practices for WML service invocation from ODM, or making choices in the design of the ODM execution and business object model. For each topic, we try as much as possible to provide you with the code as well as detailed steps to exercise the code or process for yourself.
+This is a summary of what you will find in each section:
 
-This is what to expect from each sections:
+- **Use case** introduces the example that we are using throughout the different sections.
 
-- The *Use case* section introduces the example that we are using throughout the different sections.
+- **Solution deployment** goes through the required environment to support the solution, details about install, scaling and security, and how to deploy the different solution artifacts.
 
-- *Configuration* goes through install steps for ODM and Business Automation Insights (BAI) and addresses non-functional questions such as scaling and security.
+- **ODM-WML integration** proposes a model and implementation to set up the invocation of WML services from ODM.
 
-- *Integration* proposes a model and implementation to set up the invocation of WML services from ODM.
+- **Champion-challenger with BAI** presents how you can implement this type of deployment strategy in ODM with the use of the BAI component.
 
-- *Champion-Challenger* presents how you can implement this type of deployment strategy in ODM with the use of the BAI component.
+- **Large scale simulation** describes how to create a scenario provider to execute simulations in Decision Center using an external source of data for the simulation scenarios, and also how to execute simulations on a Spark grid from a Jupyter notebook in Watson Studio, allowing extreme parallelisation of simulation execution.
 
-- *Simulation* describes how to create a scenario provider to execute simulations in Decision Center using an external source of data for the simulation scenarios, and also how to execute simulations on a Spark grid from a Jupyter notebook in Watson Studio, allowing extreme parallelisation of simulation execution.
+- **CI/CD with ODM** describes how you can integrate the ODM decision services lifecycle in your CI/CD pipeline.
 
-- Finally, *CI/CD with ODM* describes how you can integrate the ODM decision services lifecycle in your CI/CD pipeline.
+## Component view
 
 The figure below provides a high-level view of the different components of CP4D, ODM and BAI working together. We will reuse part of this architecture diagram in the rest of this documentation. You can find more information about the Cloud Pak for Data and Cloud Pak for Automation architectures in the [IBM Architecture Center](https://www.ibm.com/cloud/architecture/).
 

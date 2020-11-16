@@ -4,16 +4,16 @@ description: ODM calls WML
 ---
 
 <InlineNotification kind="warning">
-<strong>Updated 11/11/2020</strong> - Work in progress
+<strong>Updated 11/12/2020</strong> - Work in progress
 </InlineNotification>
 
 ODM is a flexible and open platform that can easily interface with other applications or services. So, while it does not provide an out-of-the-box capability to connect and invoke a scoring service, you can define this integration through a dedicated XOM and BOM entry, as well as a subflow to prepare the scoring service request payload and process the ML service response.
 
-To review the code artifacts mentioned in this chapter, you should open the projects under the [`hierachical-model`](https://github.com/ibm-cloud-architecture/odm-cp4a-integration/tree/master/hierarchical-model) folder.
+To review the code artifacts mentioned in this chapter, you should open the projects under the [`hierachical-model`](https://github.com/ibm-cloud-architecture/odm-cp4a-integration/tree/master/hierarchical-model) folder in Rule Studio.
 
 ## Defining the scoring service invocation helper
 
-Invocation of the scoring services rely on the [`PredictionServices`](https://github.com/ibm-cloud-architecture/odm-cp4a-integration/blob/master/hierarchical-model/helper-ml-xom/src/com/ibm/odm/ml/PredictionServices.java) Java class. This class and its methods are then made available to the rules by creating the following BOM entry as part of the decision service project:
+Invocation of the scoring services rely on the [`PredictionServices`](https://github.com/ibm-cloud-architecture/odm-cp4a-integration/blob/master/hierarchical-model/helper-ml-xom/src/com/ibm/odm/ml/PredictionServices.java) Java class, found in the `helper-ml-xom` project. This class and its methods are then made available to the rules by creating the following BOM entry as part of the decision service project:
 
 ![](../images/helper-bom.png)
 
@@ -49,7 +49,9 @@ As discussed previously, the invocation from the rules occurs in three steps tha
 Let's review this flow's successive tasks and their rules.
 
 ### `init prediction features`
-Some values, in particular numbers, are the same on in the ODM world and in the WML world. In this case the initializations of the scoring parameters can be simply done with a rule like the following:
+When invoking a scoring service from ODM, we need to bridge two object models: the ODM model, which is usually structured as a hierarchy of concepts and attributes and the ML service input parameters, which is a flat list of attribute values corresponding to the set of features used to train the ML model.
+
+Some attribute values, in particular numbers, are the same on in the ODM world and in the WML world. In this case the initializations of the scoring parameters can be simply done by navigating to the ODM attribute, and assigning its value to the scoring parameter. This is what is done in the following rules:
 
 ![](../images/simple-mapping.png)
 
