@@ -10,8 +10,8 @@ import java.util.Random;
 
 public class SampleRequestExecutor {
 
-	private static String endpoint = "https://decisionserverconsole.odm.icp4adeploy.cp4a.pathfinder-royalbankofc-73aebe06726e634c608c4167edcc2aeb-0000.tor01.containers.appdomain.cloud/DecisionService/rest/v1";
-	private static String odmToken = "LTPATOKEN2_DS_icp4adeploy=UV7wViCfu1b0lsYjCxxhXZnTaKMyT4XgQsvsIMASk+sYdl6feVUcoz1moqZvaTDu4XAkfvvoKqgOScpxeqidrkGJOL8aLrOaPNPIZifsSSMQpe8FhFS8Rulxskch5vkgErkmwYqP2nqf8gAmxhCRxs1Y2n2t7iqjv5ZmAISicocRKnBn0SG8RkC5s36qiyQypFnj2TQdW2dm1bSVjgedX/ldwUbW4wwLnQ8Ev+mZfUgjCdmCRaDg5r8iJEjI9bLRn+z4ubPbQIZs8+rN5aFaOtnCw+hKr9m0VuCDM1Pim9+YRv1OR6BF/3j+yUDe534Y";
+	private static String endpoint = "<var:decisionserver-url>/DecisionService/rest/v1";
+	private static String odmToken = "LTPATOKEN2_DS_icp4adeploy=<var:res-token>";
 	private static Random random = new Random();
 
 	static {
