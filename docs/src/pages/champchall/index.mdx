@@ -4,8 +4,6 @@ description: Champion/challenger with BAI
 ---
 
 
-## What is it?
-
 Champion/challenger is a common decision-proofing practice in the banking and lending industries. It is very similar in principle to A/B testing, and is performed in a *production environment*.
 
 The *champion* is the current version of the decision deployed in production. The *challenger* is the new version of the decision that will also be deployed in production to be tested against the champion. When the decision is called, a portion (usually a majority) of the traffic will be routed to the champion, and the remainder to the challenger.
@@ -50,7 +48,17 @@ The screenshot below shows an example of where you would have to update the vers
 
 ![](../images/query-update.png)
 
+### Generate requests to the decision service
+A number of predefined JSON request payloads for the `assess_risk` decision are defined in the `scenarios.json` file in the [champion-challenger](https://github.com/ibm-cloud-architecture/odm-cp4d-integration/tree/master/data/champion-challenger) folder.
+To invoke these requests, you can use the `send-requests.bat|sh` script located in the [tools](https://github.com/ibm-cloud-architecture/odm-cp4d-integration/tree/master/hierarchical-model/tools) Java project, with 3 parameters:
+- the champion ruleset path
+- the challenger ruleset path
+- The percent of calls routed to the champion
 
-<InlineNotification kind="warning">
-<strong>Updated 11/16/2020</strong> - Work in progress
-</InlineNotification>
+For example, use the command `send-requests /lending/1.0/assess_risk/1.0 /lending/1.0/assess_risk/1.1 80`. You will an output similar to this:
+![](../images/pushing-requests.png)
+
+### Watch the Kibana dashboard
+Make sure to adjust the Kibana time range to a short, recent period (e.g. last 15 minutes) and watch the Kibana dashboard evolve. It will show you the number of requests for champion and challenger and the distribution of risks for each, similar to this:
+![](../images/bai-dashboard.png)
+

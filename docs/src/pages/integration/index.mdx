@@ -3,10 +3,6 @@ title: ODM-WML integration
 description: ODM calls WML
 ---
 
-<InlineNotification kind="warning">
-<strong>Updated 11/12/2020</strong> - Work in progress
-</InlineNotification>
-
 ODM is a flexible and open platform that can easily interface with other applications or services. So, while it does not provide an out-of-the-box capability to connect and invoke a scoring service, you can define this integration through a dedicated XOM and BOM entry, as well as a subflow to prepare the scoring service request payload and process the ML service response.
 
 To review the code artifacts mentioned in this chapter, you should open the projects under the [`hierachical-model`](https://github.com/ibm-cloud-architecture/odm-cp4a-integration/tree/master/hierarchical-model) folder in Rule Studio.
@@ -48,7 +44,7 @@ As discussed previously, the invocation from the rules occurs in three steps tha
 
 Let's review this flow's successive tasks and their rules.
 
-### `init prediction features`
+### Task `init prediction features`
 When invoking a scoring service from ODM, we need to bridge two object models: the ODM model, which is usually structured as a hierarchy of concepts and attributes and the ML service input parameters, which is a flat list of attribute values corresponding to the set of features used to train the ML model.
 
 Some attribute values, in particular numbers, are the same on in the ODM world and in the WML world. In this case the initializations of the scoring parameters can be simply done by navigating to the ODM attribute, and assigning its value to the scoring parameter. This is what is done in the following rules:
@@ -67,13 +63,13 @@ Decision table `set checking status`
 
 You can find more example of mapping rules under the `init prediction features` package.
 
-### `run prediction`
+### Task `run prediction`
 Once the value mapping is done and all scoring parameter values have been accumulated by the `PredictionServices` instance, you just have to call the scoring service method from a rule like the one below, which uses the verbalized form of the `runSinglePrediction` method to runs the `risk scoring` service and sets the output value to a temprary ODM variable. 
 
 ![](../images/apply-scoring.png)
 
-### `set prediction result`
-This final step maps the score from WML to the corresponding ODM attribute value. At this point, the scoring operation is complete and the rest of the ODM rules can continue to execute.
+### Task `set prediction result`
+This final step maps back the score value obtained from WML to the corresponding ODM attribute value. At this point, the scoring operation is complete and the rest of the ODM rules can continue to execute.
 
 
 
