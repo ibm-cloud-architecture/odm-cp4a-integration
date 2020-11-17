@@ -4,7 +4,7 @@ import ResourceLinks from 'gatsby-theme-carbon/src/components/LeftNav/ResourceLi
 const links = [
   {
     title: 'Github',
-    href: 'https://github.com/ibm-cloud-architecture/refarch-dba',
+    href: 'https://github.com/ibm-cloud-architecture/odm-cp4d-integration',
   }
 ];
 

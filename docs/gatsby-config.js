@@ -4,7 +4,7 @@ module.exports = {
     description: 'This project represents the body of knowledge around Digital Business Automation architecture and can be considered as a live book, we are writing from our consulting engagements',
     keywords: 'gatsby,theme,carbon'
   },
-  pathPrefix: `/refarch-dba`,
+  pathPrefix: `/odm-cp4d-integration`,
   plugins: [
     {
       resolve: 'gatsby-theme-carbon',
@@ -12,7 +12,7 @@ module.exports = {
         isSearchEnabled: true,
         titleType: 'append',
         repository: {
-          baseUrl: 'https://github.com/ibm-cloud-architecture/refarch-dba',
+          baseUrl: 'https://github.com/ibm-cloud-architecture/odm-cp4d-integration',
           subDirectory: '/docs',
           branch: 'master'
         }
