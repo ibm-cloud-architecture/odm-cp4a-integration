@@ -17,13 +17,12 @@ The steps to use this class are the following:
 
 - You start by creating an instance of `PredictionServices`, providing the WML service endpoint and the associated WML token for authorization. You will probably want to create this instance in the starting node of the ruleflow, as it can be reused all through the rules execution.
 
-- You then define the names of the scoring parameters using the `defineFeature` method, in the order expected by the scoring service.
+- Using the `defineFeature` method, you then define the names of the scoring parameters in the order expected by the scoring service.
 
-- You can then set the values for the parameters using the appropriate `addFeature` method depending on whether the type of the feature is an string, an integer, etc..
+- You can then set the value for the parameters using the appropriate `addFeature` method depending on whether the type of the feature is an string, an integer, etc..
 
 - At this point, you are ready to invoke the `runSinglePrediction` method, to which you provide the resource for the scoring service, e.g. `/v4/deployments/<wml-service-id>/predictions`, as parameter.
-This method takes care of creating the required JSON input payload for the scoring service, calling the service and extracting the prediction from the service response.
-The JSON payload returned by the WML scoring service is expected to look like this:
+The method takes care of creating the required JSON input payload for the scoring service, calling the service and extracting the prediction from the service response. The JSON payload returned by the WML scoring service is expected to look like this:
 ```
 {
    "predictions": [{
@@ -32,7 +31,7 @@ The JSON payload returned by the WML scoring service is expected to look like th
     }]
 }
 ```
-Out of this payload, only the `prediction` value as a string is returned by `runSinglePrediction`, in this case `"No Risk"`.
+Out of this payload, only the `prediction` value is returned as a string by `runSinglePrediction`. In the above example, the returned value is `"No Risk"`.
 
 For testing purpose, you can use the `runPredictionService` static method, which executes a scoring services given the full URL of the service, the authentication token and the service input data as a json string. 
 
@@ -69,7 +68,7 @@ Once the value mapping is done and all scoring parameter values have been accumu
 ![](../images/apply-scoring.png)
 
 ### Task `set prediction result`
-This final step maps back the score value obtained from WML to the corresponding ODM attribute value. At this point, the scoring operation is complete and the rest of the ODM rules can continue to execute.
+This final step maps back the score value obtained from WML to the corresponding ODM attribute value. At this point, the scoring operation is complete and the rest of the ODM flow can continue to execute.
 
 
 

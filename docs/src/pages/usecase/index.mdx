@@ -1,25 +1,22 @@
 ---
-title: Use case
-description: Description of the use case
+title: Use case definition
+description: Use case definition
 ---
 
 Running ML-based scoring models as part of a rule-based decision service is a widespread need. It is almost always a requirement for solutions that involve activities such as:
 - Evaluating risk for underwriting a contract
 - Assessing fraud potential for a financial transaction or claim.
 
-The business scenario underlying the code provided in this repository is about evaluating a bank credit risk. The goal is to show how to combine the Operational Decision Manager (ODM) component from the IBM Cloud Pak for Automation with the IBM Cloud Pak for Data platform to create, simulate, manage, and operationalize a loan risk evaluation decision service. This service uses:
+The business scenario underlying the code provided in this repository is about evaluating a bank credit risk. The goal is to show how to combine components from the IBM Cloud Pak for Automation and the IBM Cloud Pak for Data to create, simulate, manage, operationalize and monitor a loan risk evaluation decision service. This service uses:
 
 - A **predictive assessment** component that relies on a ML model for loan default. The basis we are using for this component is the well-know [German Credit Risk](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)) classification data. The training data for the model can be found in [this CSV file](https://github.com/ibm-cloud-architecture/odm-cp4a-integration/blob/master/data/ml-training-data/gcr-training-data.csv).
 
 - A **relationship assessment** component, implemented as a set of explicit business rules based on established company policies to compound the raw outcome of the predictive model with e.g. banking relationship-based factors. For example, the bank may want to explicitly favor employees of the bank and their family and pre-emptively reduce their risk score.
 
-The basic decision flow is the following:
+The basic decision flow is illustrated on the following diagram, where the combined assessment is in charge of computing the final risk as a combination of the predictive and relationship assessment:
 
 ![](../images/use-case-flow.png)
 
-The combined assessment step is using a simple decision table to combine the two components of the risk evaluation:
-
-![](../images/combined-risk-table.png)
 
 ## ODM object modeling considerations
 ML models use simple collection of data points, which make them inherently more agile than decision services from a data structure point of view. Before embarking on the integration of rules with machine learning, you have to consider whether to use a rich and structured ODM object model, or a dynamic and flat one, or maybe a combination of both.

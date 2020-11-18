@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="assess_risk" usingRuleflow="true" ruleflowName="risk assessment flow" targetRuleProjectName="dynamic-risk-assessment-main">
+  <name>assess risk</name>
+  <uuid>d96b210a-9da1-49ae-995a-d20ade4211ce</uuid>
+  <referencedVariables variableName="payload" variableSetName="variables" direction="IN_OUT">
+    <variableSet href="../../dynamic-risk-assessment-rules/rules/variables.var#b750a53a-8829-42bb-9f9b-0ce068d29b1b"/>
+  </referencedVariables>
+  <ruleflow href="../../dynamic-risk-assessment-rules/rules/risk%20assessment%20flow.rfl#a2aed33e-40cb-4850-bcf5-51ece891596c"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="assess risk_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../dynamic-risk-assessment-main#67be4626-4ceb-4fea-840a-ba41cb286378"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

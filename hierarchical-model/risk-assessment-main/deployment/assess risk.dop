@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.query.extractor="http://ilog.rules.studio/model/query/extractor.ecore" rulesetName="assess_risk" usingRuleflow="true" ruleflowName="risk assessment flow" targetRuleProjectName="risk-assessment-main">
+  <name>assess risk</name>
+  <uuid>a406a8cd-9684-441f-bcee-87e4b8b659fd</uuid>
+  <referencedVariables variableName="loan" variableSetName="variables">
+    <variableSet href="../../risk-assessment-rules/rules/variables.var#8fadbe22-2bd9-4967-b142-a36a3dc03487"/>
+  </referencedVariables>
+  <referencedVariables variableName="risk" variableSetName="variables" direction="OUT">
+    <variableSet href="../../risk-assessment-rules/rules/variables.var#8fadbe22-2bd9-4967-b142-a36a3dc03487"/>
+  </referencedVariables>
+  <referencedVariables variableName="riskScoringResource" variableSetName="variables">
+    <variableSet href="../../risk-assessment-rules/rules/variables.var#8fadbe22-2bd9-4967-b142-a36a3dc03487"/>
+  </referencedVariables>
+  <ruleflow href="../../risk-assessment-rules/rules/risk%20assessment%20flow.rfl#242ceee9-c91a-44d4-85bc-8c30352caa2d"/>
+  <extractor xsi:type="ilog.rules.studio.model.query.extractor:QueryExtractor" name="assess risk_extractor" validator="Default Validator"/>
+  <targetRuleProject href="../../risk-assessment-main#784740a9-71bc-4071-a626-d7a536412f8b"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>
