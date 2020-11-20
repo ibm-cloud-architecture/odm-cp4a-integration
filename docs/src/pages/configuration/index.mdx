@@ -32,10 +32,12 @@ In order to run a scoring service from ODM, you need to create and deploy this s
 - When prompted by a green message box, click `View in project` and on the model page, click the `Promote to deployment space` link.
 - From the main menu (hamburger on the left), you can select `Analytics deployment` then select the deployment space you used to deploy your newly minted scoring model. You should now see something like this:
 ![](../images/deployment-space.png)
-- Click on your model, then on the next page, click the `Create deployment` button. Select `Online` for the deployment type, provide a name for the deployment and click `Create`. After a while, your scoring service is now deployed as a web service. Click on the service to get the endpoint to execute the scoring. You can also perform some quick tests from this page.
-![](../images/deployed-service-details.png)
+- Click on your model, then on the next page, click the `Create deployment` button. Select `Online` for the deployment type, provide a name for the deployment and click `Create`. After a while, your scoring service is now deployed as a web service. Click on the service to get the endpoint to execute the scoring.
+*Take note of this endpoint* as it is the one that you will provide to the ODM decision service so it can invoke the scoring service.
 
-**Important**: Take note of the endpoint provided in the above page, as it is the one that you will provide to the ODM decision service so it can invoke the scoring service.
+You can also perform some quick, interactive tests of the scoring service from this page.
+
+![](../images/deployed-service-details.png)
 
 ### ODM decision services deployment
 
